@@ -1,0 +1,150 @@
+\documentclass[twoside,12pt,a4paper,english,openright,titlepage,DIV13,headinclude=true,BCOR16mm]{scrbook} %,BCOR15mm
+\usepackage{ae}
+\usepackage{aecompl}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{multicol}
+\usepackage[UKenglish]{babel}
+%\usepackage[ngerman]{babel}
+\usepackage{tocbasic}
+\usepackage[textsize=tiny]{todonotes} % obeyDraft for draft mode todos only
+%\usepackage{subfig}
+\usepackage{bibgerm}
+\usepackage{microtype}
+\usepackage{todonotes}
+\usepackage{comment}
+%\usepackage{mathtools}
+%\usepackage{pgfplots}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{textpos}
+
+\usepackage{listings}
+%\usepackage{charter}
+
+%\typearea[15mm]{current}
+
+\usepackage{listings}
+\xdefinecolor{lightgray}{gray}{0.95}
+%\xdefinecolor{darkgreen}{rgb}{0,0.54,0}
+%\lstset{tabsize=2, numbers=left, numberstyle=\footnotesize, basicstyle=\footnotesize, numbersep=5pt}
+\lstset{
+	tabsize = 4,
+	numbers = left,
+	numberstyle=\footnotesize,
+	numbersep = 5pt,
+	backgroundcolor = \color{white},
+	basicstyle = \color{black}\scriptsize,
+	%basicstyle = \ttfamily\fontsize{8}{10},
+	commentstyle = \color{gray},
+	frame = none,
+	breaklines = true,
+	captionpos = b
+}
+
+% for headers
+\usepackage{fancyhdr}
+% makes pdf from eps
+\usepackage{epstopdf}
+
+% hyperref package ist useful for showing chapters and section in resulting pdf document
+\usepackage[plainpages=false,breaklinks=true,draft=false]{hyperref}
+\title{NRU | admin handbook}
+\author{NRU|AmericanPsyko}
+\hypersetup{
+	pdftitle = {NRU Admin handbook},
+	pdfkeywords = {NRU, handbook},
+	pdfauthor = {NRU|AmericanPsyko},
+	colorlinks = true,
+	linkcolor = black,
+	citecolor = black,
+	urlcolor = black
+}
+\newlength{\myx} % save image width
+\newlength{\myy} % save image height
+
+%\typearea[current]{current}
+% indentation for new paragraphs
+\parindent0em
+
+% fancyhdr-package for customizing headers and avoid foot-page-marks
+% twoside options nesessary
+% 1						1. actual chapter  1.1 actual section						2
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[EL]{\thepage}
+\fancyhead[ER]{\leftmark}
+\fancyhead[OL]{\rightmark}
+\fancyhead[OR]{\thepage}
+\renewcommand{\chaptermark}[1]{
+	\markboth{\thechapter{} #1}{}
+}
+\renewcommand{\sectionmark}[1]{
+	\markright{\thesection{} #1}
+}
+
+%\newcommand{\icontick}{\includegraphics[width=1em]{resource/icons/tick.png}}
+%\newcommand{\iconcross}{\includegraphics[width=1em]{resource/icons/cross.png}}
+%\newcommand{\dotgreen}{\includegraphics[width=1em]{resource/icons/dotgreen.png}}
+%\newcommand{\dotred}{\includegraphics[width=1em]{resource/icons/dotred.png}}
+%\newcommand{\iconplus}{\includegraphics[width=1em]{resource/icons/plus.png}}
+%\newcommand{\iconminus}{\includegraphics[width=1em]{resource/icons/minus.png}}
+
+\parskip2mm
+
+% makes this document able to show more than three images on one page
+\setcounter{totalnumber}{50}
+
+% BEGIN OF DOCUMENT
+\begin{document}
+
+% include cover sheet
+\include{include/cover}
+
+%compile cover sheet
+\maketitle
+%=========================== special thanks ===========================
+
+\chapter*{Special thanks}
+We would like to thank the following people for their contributions to this document:\\
+\begin{itemize}
+  \item AmerikanPsyko
+  \item Poolboy
+  \item Niche
+	\item Hustler
+	\item IRA\texttrademark
+\end{itemize}
+
+\vfil
+
+NRU admin team
+
+\pagenumbering{Roman}
+% compile liste of todos
+%\listoftodos
+\tableofcontents
+%\listoffigures
+%\listoftables
+% umfasst ausschlieﬂlich die Einleitung zur gesamten Arbeit inklusive angestrebter Ziele und Erl‰uterung der Struktur der Arbeit
+\clearpage
+% set roman page numbers for the first pages
+\pagenumbering{arabic}
+\input{include/intro}
+\input{include/expectations}
+\input{include/clan_structure}
+\input{include/server_rules}
+\input{include/admin_protocol}
+\input{include/admin_responsibilities}
+\input{include/admin_rights}
+\input{include/B3}
+%\input{include/attachment}
+
+
+
+\end{document}
