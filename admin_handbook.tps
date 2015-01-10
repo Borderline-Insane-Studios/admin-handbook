@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=include\server_rules.tex
 
 [Frame1_View0,0]
-TopLine=59
+TopLine=61
 Cursor=3716
 
 [Frame2]
