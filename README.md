@@ -24,6 +24,7 @@ You can download the current version here: https://github.com/Borderline-Insane-
   - Admin responsibilities: https://github.com/Borderline-Insane-Studios/admin-handbook/blob/master/include/admin_responsibilities.tex
   - Admin rights: https://github.com/Borderline-Insane-Studios/admin-handbook/blob/master/include/admin_rights.tex
   - B3: https://github.com/Borderline-Insane-Studios/admin-handbook/blob/master/include/B3.tex
+  - Say commands: https://github.com/Borderline-Insane-Studios/admin-handbook/blob/master/include/say_commands.tex
   
 
 
